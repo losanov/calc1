@@ -8,7 +8,6 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -21,7 +20,7 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.result = QtWidgets.QLabel(self.centralwidget)
-        self.result.setGeometry(QtCore.QRect(10, 9, 371, 44))
+        self.result.setGeometry(QtCore.QRect(10, 9, 271, 44))
         font = QtGui.QFont()
         font.setFamily("Rockwell Extra Bold")
         font.setPointSize(15)
@@ -29,7 +28,7 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.result.setFont(font)
         self.result.setStyleSheet("background-color: rgb(200, 214, 228);\n"
-                                  "color: rgb(255, 255, 255);")
+"color: rgb(255, 255, 255);")
         self.result.setObjectName("result")
         self.btn_0 = QtWidgets.QPushButton(self.centralwidget)
         self.btn_0.setEnabled(True)
@@ -160,6 +159,16 @@ class Ui_MainWindow(object):
         self.btn_equal.setFont(font)
         self.btn_equal.setStyleSheet("background-color: rgb(255, 170, 127);")
         self.btn_equal.setObjectName("btn_equal")
+        self.touch_btn = QtWidgets.QPushButton(self.centralwidget)
+        self.touch_btn.setGeometry(QtCore.QRect(281, 9, 111, 44))
+        font = QtGui.QFont()
+        font.setFamily("Comic Sans MS")
+        font.setPointSize(13)
+        self.touch_btn.setFont(font)
+        self.touch_btn.setAutoFillBackground(False)
+        self.touch_btn.setStyleSheet("background-color: rgb(172, 99, 255);")
+        self.touch_btn.setCheckable(False)
+        self.touch_btn.setObjectName("touch_btn")
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -184,44 +193,15 @@ class Ui_MainWindow(object):
         self.btn_div.setText(_translate("MainWindow", "/"))
         self.btn_mult.setText(_translate("MainWindow", "*"))
         self.btn_equal.setText(_translate("MainWindow", "="))
-
-    def add_functions(self):
-        self.btn_0.clicked.connect(lambda: self.write_number(self.btn_0.text()))
-        self.btn_1.clicked.connect(lambda: self.write_number(self.btn_1.text()))
-        self.btn_2.clicked.connect(lambda: self.write_number(self.btn_2.text()))
-        self.btn_3.clicked.connect(lambda: self.write_number(self.btn_3.text()))
-        self.btn_4.clicked.connect(lambda: self.write_number(self.btn_4.text()))
-        self.btn_5.clicked.connect(lambda: self.write_number(self.btn_5.text()))
-        self.btn_6.clicked.connect(lambda: self.write_number(self.btn_6.text()))
-        self.btn_7.clicked.connect(lambda: self.write_number(self.btn_7.text()))
-        self.btn_8.clicked.connect(lambda: self.write_number(self.btn_8.text()))
-        self.btn_9.clicked.connect(lambda: self.write_number(self.btn_9.text()))
-        self.btn_plus.clicked.connect(lambda: self.write_number(self.btn_plus.text()))
-        self.btn_minus.clicked.connect(lambda: self.write_number(self.btn_minus.text()))
-        self.btn_mult.clicked.connect(lambda: self.write_number(self.btn_mult.text()))
-        self.btn_div.clicked.connect(lambda: self.write_number(self.btn_div.text()))
-
-        self.btn_equal.clicked.connect(self.results)
-
-    def write_number(self, number):
-        if self.result.text() == '0' or self.is_equal:
-            self.result.setText(number)
-            self.is_equal = False
-        else:
-            self.result.setText(self.result.text() + number)
-
-    def results(self):
-        res = eval(self.result.text())
-        self.result.setText(f'Result: {res}')
-        self.is_equal = True
+        self.touch_btn.setText(_translate("MainWindow", "Тицни мене"))
 
 
 if __name__ == "__main__":
     import sys
-
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
+

@@ -25,7 +25,7 @@
      <rect>
       <x>10</x>
       <y>9</y>
-      <width>371</width>
+      <width>271</width>
       <height>44</height>
      </rect>
     </property>
@@ -413,6 +413,34 @@ color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>=</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="touch_btn">
+    <property name="geometry">
+     <rect>
+      <x>281</x>
+      <y>9</y>
+      <width>111</width>
+      <height>44</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Comic Sans MS</family>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(172, 99, 255);</string>
+    </property>
+    <property name="text">
+     <string>Тицни мене</string>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
     </property>
    </widget>
   </widget>
