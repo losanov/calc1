@@ -165,10 +165,6 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-        self.add_functions()
-
-        self.is_equal = False
-
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Калькулятор"))
@@ -218,6 +214,7 @@ class Ui_MainWindow(object):
         res = eval(self.result.text())
         self.result.setText(f'Result: {res}')
         self.is_equal = True
+
 
 if __name__ == "__main__":
     import sys
