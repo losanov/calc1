@@ -7,31 +7,26 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from result_lineView import Ui_Form
 import sys
 
-class Ui_Form(object):
-    def setupUi(self, Form):
-        Form.setObjectName("Form")
-        Form.resize(292, 65)
-        self.result = QtWidgets.QLabel(Form)
-        self.result.setGeometry(QtCore.QRect(10, 9, 271, 44))
-        font = QtGui.QFont()
-        font.setFamily("Rockwell Extra Bold")
-        font.setPointSize(15)
-        font.setBold(True)
-        font.setWeight(75)
-        self.result.setFont(font)
-        self.result.setStyleSheet("background-color: rgb(200, 214, 228);\n"
-"color: rgb(255, 255, 255);")
-        self.result.setObjectName("result")
 
-        self.retranslateUi(Form)
-        QtCore.QMetaObject.connectSlotsByName(Form)
+class Result(QtWidgets.QMainWindow, Ui_Form):
+    def __init__(self):
+        super().__init__()
+        self.is_equal = False
 
-    def retranslateUi(self, Form):
-        _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
-        self.result.setText(_translate("Form", "0"))
+    def write_number(self, number):
+        if self.result.text() == '0' or self.is_equal:
+            self.result.setText(number)
+            self.is_equal = False
+        else:
+            self.result.setText(self.result.text() + number)
+
+    def results(self):
+        res = eval(self.result.text())
+        self.result.setText(f'Result: {res}')
+        self.is_equal = True
 
 
 if __name__ == "__main__":
@@ -41,4 +36,3 @@ if __name__ == "__main__":
     ui.setupUi(Form)
     Form.show()
     sys.exit(app.exec_())
-

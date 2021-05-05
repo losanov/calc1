@@ -1,14 +1,15 @@
 from PyQt5 import QtWidgets
-from calc import Ui_MainWindow
 from layout import Ui_MainWindow
+from button import Button
+# from result_line import Ui_Form
 import sys
 
 
-class Calculator(QtWidgets.QMainWindow, Ui_MainWindow):
+class Calculator(QtWidgets.QMainWindow, Ui_MainWindow, Button):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
-        self.is_equal = False
+        self.add_functions()
 
 
 if __name__ == "__main__":
