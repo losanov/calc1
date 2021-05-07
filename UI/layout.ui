@@ -14,16 +14,21 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QListView" name="listView">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>393</width>
-      <height>424</height>
-     </rect>
+   <layout class="QVBoxLayout" name="verticalLayout" stretch="1,9">
+    <property name="topMargin">
+     <number>9</number>
     </property>
-   </widget>
+    <item>
+     <layout class="QVBoxLayout" name="result_layout"/>
+    </item>
+    <item>
+     <layout class="QGridLayout" name="button_layout">
+      <property name="verticalSpacing">
+       <number>6</number>
+      </property>
+     </layout>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

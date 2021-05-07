@@ -6,39 +6,38 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>292</width>
-    <height>65</height>
+    <width>378</width>
+    <height>271</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLabel" name="result">
+  <widget class="QPushButton" name="btn">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>9</y>
-     <width>271</width>
-     <height>44</height>
+     <x>0</x>
+     <y>0</y>
+     <width>100</width>
+     <height>100</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Rockwell Extra Bold</family>
-     <pointsize>15</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
+     <pointsize>17</pointsize>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(200, 214, 228);
-color: rgb(255, 255, 255);</string>
+    <string notr="true">background-color: rgb(255, 255, 127);</string>
    </property>
    <property name="text">
-    <string>0</string>
+    <string/>
    </property>
-   <property name="margin">
-    <number>10</number>
+   <property name="autoRepeatDelay">
+    <number>300</number>
+   </property>
+   <property name="autoRepeatInterval">
+    <number>100</number>
    </property>
   </widget>
  </widget>
