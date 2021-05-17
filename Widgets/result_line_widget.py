@@ -10,7 +10,10 @@ class Result(QWidget, Ui_Form):
         self.setupUi(self)
 
     def set_result(self, value):
-        self.result.setText(value)
+        self.result.setText(str(value))
 
     def get_result(self):
         return self.result.text()
+
+    def add_number(self, value):
+        self.result.setText(self.result.text() + str(value))

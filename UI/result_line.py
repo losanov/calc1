@@ -26,6 +26,7 @@ class Ui_Form(object):
         self.result.setFont(font)
         self.result.setStyleSheet("background-color: rgb(200, 214, 228);\n"
 "color: rgb(255, 255, 255);")
+        self.result.setText("")
         self.result.setObjectName("result")
         self.verticalLayout.addWidget(self.result)
 
@@ -35,4 +36,3 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.result.setText(_translate("Form", "0"))
